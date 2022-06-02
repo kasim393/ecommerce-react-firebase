@@ -116,7 +116,7 @@ const ShopCard = ({ product, title }) => {
           />
         )}
       </div>
-      <ToastContainer
+      {/* <ToastContainer
         position="bottom-right"
         autoClose={1000}
         hideProgressBar
@@ -126,18 +126,7 @@ const ShopCard = ({ product, title }) => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
-      <ToastContainer
-        position="bottom-right"
-        autoClose={1000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+      /> */}
     </div>
   );
 };

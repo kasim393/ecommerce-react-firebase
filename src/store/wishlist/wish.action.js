@@ -1,6 +1,5 @@
 import { createAction } from "../../utils/reducer/reducer.utils";
 import { WISH_ACTION_TYPES } from "./wish.types";
-
 const addWishItem = (wishItems, productToAdd) => {
   // find if wishItems contains productToAdd
   const existingWishItem = wishItems.find(
