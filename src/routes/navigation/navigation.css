@@ -1,0 +1,82 @@
+.navigation_container {
+  background-color: #01221d;
+  width: 100%;
+  height: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav_logo {
+  margin-right: 140px;
+}
+.navbar_search_input {
+  position: relative;
+}
+.wish_icon {
+  font-size: 1.5rem;
+  color: white;
+}
+.wish_noti {
+  position: relative;
+}
+.wish_icon_noti {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  content: "";
+  background-color: #ff6264;
+  border-radius: 50%;
+}
+.navbar_search_input input {
+  border: 0.5px solid #4a615e;
+  border-radius: 16px;
+  background-color: transparent;
+  padding: 12px 20px 12px 40px;
+  width: 500px;
+  color: #f4f5f6;
+  outline: none;
+}
+.navbar_search_input input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+.navbar_search_input input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+.navbar_search_input input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}
+.navbar_search_input .search_icon {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+
+.navbar_noti {
+  display: flex;
+  gap: 20px;
+  margin-inline: 40px;
+}
+.navbar_noti img {
+  cursor: pointer;
+}
+.navbar_btn {
+  border: 1px solid #ffffff;
+  border-radius: 16px;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 12px 36px;
+  cursor: pointer;
+}

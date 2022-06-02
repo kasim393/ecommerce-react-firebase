@@ -1,0 +1,144 @@
+.auth-container {
+  background-color: #012210;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+.auth-top {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.auth-top img {
+  cursor: pointer;
+}
+.auth-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 772px;
+  height: 584px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+.auth-card-top {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.auth-card-top .active {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: #01221d;
+  cursor: pointer;
+  border-bottom: 2px solid #f5b3a5;
+}
+.auth-card-top h1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #8991a4;
+  cursor: pointer;
+}
+.auth-card-bottom .auth-sign-in input,
+.auth-card-bottom .auth-sign-up input {
+  border: 1px solid #8991a4;
+  border-radius: 16px;
+  background-color: transparent;
+  padding: 12px 20px 12px 40px;
+  width: 374px;
+  color: #8991a4;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.input-icons {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+.auth-container input {
+  margin-bottom: 16px;
+}
+.pass-input-icons {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.auth-sign-up .name-input {
+  position: relative;
+}
+.auth-sign-in .email-input,
+.auth-sign-up .email-input {
+  position: relative;
+}
+.auth-sign-in .password-input,
+.auth-sign-up .password-input {
+  position: relative;
+}
+.auth-sign-in span {
+  display: flex;
+  justify-content: end;
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #01221d;
+}
+.sign-in-btn button {
+  background: #07bfa5;
+  border-radius: 16px;
+  width: 374px;
+  height: 64px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  color: #fff;
+  margin-top: 60px;
+  cursor: pointer;
+}
+.sign-in-btn button:disabled {
+  cursor: not-allowed;
+  background: #02947e;
+}
+.auth-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.auth-bottom p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #f4f5f6;
+}
+.google-sign-in {
+  font-size: 40px;
+  background: #1a3833;
+  border-radius: 12px;
+  padding: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
