@@ -1,16 +1,28 @@
 import "./checkout.css";
-
-import BlackBtn from "../../components/blackbtn/BlackBtn";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CheckOutItem from "../../components/checkout-item/CheckOutItem";
 import CartEmpty from "../../components/cart-empty/CartEmpty";
 import {
   selectCartItems,
   selectCartTotal,
+  selectTotal,
 } from "../../store/cart/cart.selector";
+import PaymentForm from "../../components/payment-form/payment-form";
+import { clearAllItemFromCart } from "../../store/cart/cart.action";
+import { useRef } from "react";
 const CheckOut = () => {
   const cartItems = useSelector(selectCartItems);
   const cartTotal = useSelector(selectCartTotal);
+  const { total } = useSelector(selectTotal);
+  const dispatch = useDispatch();
+  const itemRef = useRef([]);
+
+  const clearItemHandler = () => {
+    dispatch(clearAllItemFromCart(cartItems, itemRef.current));
+  };
+  cartItems.map((item) => {
+    itemRef.current.push(item);
+  });
   return (
     <>
       {cartTotal ? (
@@ -18,7 +30,9 @@ const CheckOut = () => {
           <div className="checkout-left">
             <div className="checkout-left-top">
               <h1>Cart</h1>
-              <span className="checkout-clear">clear</span>
+              <span className="checkout-clear" onClick={clearItemHandler}>
+                clear
+              </span>
             </div>
             <div className="checkout-left-bottom">
               {cartItems.map((cartItem) => (
@@ -39,8 +53,8 @@ const CheckOut = () => {
                 <b>${cartTotal}</b>
               </div>
               <div>
-                <p>Shipping Fee</p>
-                <b>$4.00</b>
+                <p>Tax</p>
+                <b>% 6.00</b>
               </div>
               <div>
                 <p>Coupon</p>
@@ -49,15 +63,14 @@ const CheckOut = () => {
               <hr />
               <div>
                 <p>Total Order</p>
-                <b className="checkout_total">${cartTotal}</b>
+                <b className="checkout_total">${total}</b>
               </div>
               <div>
                 <input type="text" placeholder="Enter a coupon code" />
                 <button className="checkout_apply">Apply</button>
               </div>
-              <div>
-                <BlackBtn text="Checkout" className="checkout-btn" />
-              </div>
+
+              <PaymentForm />
             </div>
           </div>
         </div>

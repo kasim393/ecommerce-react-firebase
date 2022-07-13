@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { selectCategoriesMap } from "../../store/categories/category.selector";
+import Spinner from "../../components/spinner/Spinner";
+import {
+  selectCategoriesMap,
+  selectIsLoading,
+} from "../../store/categories/category.selector";
 import ShopCard from "../shop/ShopCard";
 import "./category.css";
 
@@ -10,6 +14,8 @@ const Category = () => {
   const categoriesMap = useSelector(selectCategoriesMap);
   const [products, setProducts] = useState(categoriesMap[category]);
   const [filter, setFilter] = useState("");
+  const isLoading = useSelector(selectIsLoading);
+
   useEffect(() => {
     const sorting = (type) => {
       if (type === "high") {
@@ -44,12 +50,16 @@ const Category = () => {
         </span>
       </div>
       <div className="category-wrapper">
-        <div className="category-products">
-          {products &&
-            products.map((product) => (
-              <ShopCard key={product.id} product={product} />
-            ))}
-        </div>
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          <div className="category-products">
+            {products &&
+              products.map((product) => (
+                <ShopCard key={product.id} product={product} />
+              ))}
+          </div>
+        )}
       </div>
     </div>
   );

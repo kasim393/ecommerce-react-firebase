@@ -58,6 +58,7 @@
   width: 60px;
   height: 60px;
   margin-right: 12px;
+  border-radius: 12px;
 }
 .checkout-card-left div div {
   display: flex;
@@ -103,12 +104,12 @@
 .checkout-right {
   flex: 1;
   display: flex;
+  flex-direction: column;
 }
 .checkout-card {
   background: #f9fafb;
   border-radius: 16px;
   width: 473px;
-  height: 492px;
   padding: 32px 40px;
 }
 .checkout-card div {
@@ -164,7 +165,4 @@
   color: #01040d;
   padding: 12px 36px;
   cursor: pointer;
-}
-.checkout-btn {
-  width: 100% !important;
 }

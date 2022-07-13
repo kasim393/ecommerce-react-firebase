@@ -8,7 +8,7 @@
 }
 .wishlist-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   gap: 24px;
 }
 .wishlist-card {

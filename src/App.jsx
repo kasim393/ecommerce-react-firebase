@@ -13,12 +13,12 @@ import {
   onAuthStateChangedListener,
 } from "./utils/firebase/firebase.utils";
 import { setCurrentUser } from "./store/user/user.action";
-import { selectorCurrentUser } from "./store/user/user.selector";
+import { selectCurrentUser } from "./store/user/user.selector";
 import { ToastContainer } from "react-toastify";
 
 function App() {
   const dispatch = useDispatch();
-  const currentUser = useSelector(selectorCurrentUser);
+  const currentUser = useSelector(selectCurrentUser);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {

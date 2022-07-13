@@ -1,9 +1,11 @@
 import "./blackbtn.css";
 
-const BlackBtn = ({ text }) => {
+const BlackBtn = ({ text, isLoading }) => {
   return (
     <>
-      <button className="blackbtn">{text}</button>
+      <button className="blackbtn" disabled={isLoading}>
+        {text}
+      </button>
     </>
   );
 };

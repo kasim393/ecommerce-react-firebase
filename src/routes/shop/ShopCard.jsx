@@ -96,7 +96,7 @@ const ShopCard = ({ product, title }) => {
             params.category ? `${product.id}` : `/shop/${title}/${product.id}`
           }
         >
-          <img src={product.img} alt="" className="product-img" />
+          <img src={product.img} alt="product-img" className="product-img" />
         </Link>
         <p className="product-title">{product.name}</p>
         <p className="product-price">${product.price}</p>
@@ -113,20 +113,10 @@ const ShopCard = ({ product, title }) => {
             src={Circle_btn}
             className="shop-card-botom-btn-circle"
             onClick={addProductToCart}
+            alt="circle-btn"
           />
         )}
       </div>
-      {/* <ToastContainer
-        position="bottom-right"
-        autoClose={1000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      /> */}
     </div>
   );
 };

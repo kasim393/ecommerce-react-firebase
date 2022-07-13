@@ -6,9 +6,13 @@ export const selectCartItems = createSelector(
   [selectCartReducer],
   (cart) => cart.cartItems
 );
-export const selectIsCartOpen = createSelector(
+export const selectIsModalOpen = createSelector(
   [selectCartItems],
   (cart) => cart.isCartOpen
+);
+export const selectCoupon = createSelector(
+  [selectCartItems],
+  (cart) => cart.coupons
 );
 
 export const selectCartCount = createSelector([selectCartItems], (cartItems) =>
@@ -19,4 +23,15 @@ export const selectCartTotal = createSelector([selectCartItems], (cartItems) =>
     (total, cartItem) => total + cartItem.quantity * cartItem.price,
     0
   )
+);
+export const selectTaxPercent = (state) => 6;
+export const selectTax = createSelector(
+  selectCartTotal,
+  selectTaxPercent,
+  (subtotal, taxPercent) => subtotal * (taxPercent / 100)
+);
+export const selectTotal = createSelector(
+  selectCartTotal,
+  selectTax,
+  (subtotal, tax) => ({ total: subtotal + tax })
 );

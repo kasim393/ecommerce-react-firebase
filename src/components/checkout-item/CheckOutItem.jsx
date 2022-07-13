@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectCartItems } from "../../store/cart/cart.selector";
 import {
   addItemToCart,
+  clearAllItemFromCart,
   clearItemFromCart,
   removeItemFromCart,
 } from "../../store/cart/cart.action";
@@ -18,39 +19,43 @@ const CheckOutItem = ({ cartItem }) => {
   const addItemHandler = () => dispatch(addItemToCart(cartItems, cartItem));
   const removeItemHandler = () =>
     dispatch(removeItemFromCart(cartItems, cartItem));
+  const clearAllItemHandler = () =>
+    dispatch(clearAllItemFromCart(cartItems, cartItem));
   return (
-    <div className="checkout-left-bottom-card">
-      <div className="checkout-card-left">
-        <div>
-          <img src={img} alt="" />
-        </div>
-        <div>
-          <p>{name}</p>
-          <div className="checkout-card-quantity">
-            <p>
-              <AiOutlineMinusCircle
-                onClick={removeItemHandler}
-                className="checkout-card-quantity-icon"
-              />
-            </p>
-            <p className="checkout-card-quantity-count">{quantity}</p>
-            <p>
-              <AiOutlinePlusCircle
-                onClick={addItemHandler}
-                className="checkout-card-quantity-icon"
-              />
-            </p>
+    <>
+      <div className="checkout-left-bottom-card">
+        <div className="checkout-card-left">
+          <div>
+            <img src={img} alt="" />
+          </div>
+          <div>
+            <p>{name}</p>
+            <div className="checkout-card-quantity">
+              <p>
+                <AiOutlineMinusCircle
+                  onClick={removeItemHandler}
+                  className="checkout-card-quantity-icon"
+                />
+              </p>
+              <p className="checkout-card-quantity-count">{quantity}</p>
+              <p>
+                <AiOutlinePlusCircle
+                  onClick={addItemHandler}
+                  className="checkout-card-quantity-icon"
+                />
+              </p>
+            </div>
           </div>
         </div>
+        <div className="checkout-card-right">
+          <p>${price}</p>
+          <RiDeleteBin6Line
+            onClick={clearItemHandler}
+            className="checkout-card-quantity-icon"
+          />
+        </div>
       </div>
-      <div className="checkout-card-right">
-        <p>${price}</p>
-        <RiDeleteBin6Line
-          onClick={clearItemHandler}
-          className="checkout-card-quantity-icon"
-        />
-      </div>
-    </div>
+    </>
   );
 };
 export default CheckOutItem;

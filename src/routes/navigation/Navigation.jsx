@@ -9,7 +9,7 @@ import Cart_noti from "../../assets/Cart_noti.svg";
 import { selectCartCount } from "../../store/cart/cart.selector";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import { useSelector } from "react-redux";
-import { selectorCurrentUser } from "../../store/user/user.selector";
+import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectWishCount } from "../../store/wishlist/wish.selector";
 const Navigation = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Navigation = () => {
     navigate("/auth");
   };
   const wishCount = useSelector(selectWishCount);
-  const currentUser = useSelector(selectorCurrentUser);
+  const currentUser = useSelector(selectCurrentUser);
   const cartCount = useSelector(selectCartCount);
   return (
     <Fragment>
