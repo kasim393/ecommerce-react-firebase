@@ -1,7 +1,7 @@
 import "./filters.css";
 import { categoryList } from "../../utils/constant/index.js";
 import FilterListToggle from "./filterListToggle";
-import PriceFilter from "./PriceFilter";
+import PriceFilter from "./priceFilter";
 import ColorFilter from "./ColorFilter";
 import SizeFilter from "./SizeFilter";
 const Filters = ({
