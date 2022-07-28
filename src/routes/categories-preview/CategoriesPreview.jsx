@@ -127,12 +127,6 @@ const CategoriesPreview = () => {
       .filter((item) => item.checked)
       .map((item) => item.code.toLowerCase());
 
-    // if (colorsChecked.length) {
-    //   updatedList = updatedList.filter((item) =>
-    //     colorsChecked.includes(item.cuisine)
-    //   );
-    // }
-
     if (colorsChecked.length) {
       updatedList = updatedList.filter(
         (item) =>
