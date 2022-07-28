@@ -8,7 +8,6 @@ import { clearItemFromWish } from "../../store/wishlist/wish.action";
 import { selectWishItems } from "../../store/wishlist/wish.selector";
 import { useEffect, useState } from "react";
 const WishListItem = ({ wishItem }) => {
-  console.log(wishItem);
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
   const wishItems = useSelector(selectWishItems);

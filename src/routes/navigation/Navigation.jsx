@@ -6,7 +6,6 @@ import { Fragment, useContext, useState } from "react";
 import Logo from "../../assets/Logo.svg";
 import Cart from "../../assets/Cart.svg";
 import User from "../../assets/user.png";
-import Cart_noti from "../../assets/Cart_noti.svg";
 import { selectCartCount } from "../../store/cart/cart.selector";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import { useSelector } from "react-redux";

@@ -7,7 +7,6 @@ import {
 } from "../../store/categories/category.selector";
 import Spinner from "../../components/spinner/Spinner";
 import Filters from "../../components/filters/Filters";
-import { dataList } from "../../utils/constant";
 import { useEffect, useState } from "react";
 import SearchBar from "../../components/filters/SearchBar";
 import BreadCrum from "../../components/breadcrum/BreadCrum";
@@ -152,7 +151,6 @@ const CategoriesPreview = () => {
           item.size.filter((size) => sizesChecked.includes(size)).length > 0
       );
     }
-    console.log("updatedlist", updatedList);
     // Search Filter
     if (searchInput) {
       updatedList = updatedList.filter(

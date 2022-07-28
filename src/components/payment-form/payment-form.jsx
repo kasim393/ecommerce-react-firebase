@@ -50,7 +50,6 @@ const PaymentForm = () => {
   cartItems.map((item) => {
     itemRef.current.push(item);
   });
-  console.log(isModalOpen);
   const toggleIsCartOpen = () => dispatch(setIsModalOpen(!isModalOpen));
   const paymentHandler = async (event) => {
     event.preventDefault();
