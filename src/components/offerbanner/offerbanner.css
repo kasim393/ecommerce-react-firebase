@@ -1,61 +1,63 @@
 .offerbanner {
-  background: #f5b3a5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  height: 152px;
-  gap: 120px;
-  margin-top: 5rem;
+  margin: auto;
+  margin-top: 100px;
+  width: 100%;
+  max-width: 706px;
+  text-align: center;
+  margin-bottom: 100px;
 }
-.offerbanner_img {
-  position: absolute;
-  left: 0;
-}
+
 .offerbanner h1 {
-  font-style: normal;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 36px;
-  color: #01040d;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 }
 .offerbanner p {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
-  line-height: 22px;
-  color: #01040d;
+  line-height: 26px;
+  text-align: center;
+  color: #212121;
+  margin-top: 12px;
+  margin-bottom: 40px;
 }
 .offerbanner_right {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
 }
 .offer-input {
   position: relative;
 }
 .offer-input input {
-  border: 1px solid #ffffff;
-  border-radius: 16px;
-  background-color: transparent;
-  padding: 14px 16px 14px 50px;
+  background: rgba(241, 241, 241, 0.2);
+  border: 1.2px solid #f1f1f1;
+  padding: 12px 12px 12px 50px;
   outline: none;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-  color: #ffffff;
+  color: #212121;
   width: 100%;
-  max-width: 360px !important;
+  max-width: 320px !important;
 }
 .offer-input-icon {
   position: absolute;
   left: 16px;
   top: 16px;
+  font-size: 16px;
+  color: #666;
 }
 .offerbanner-btn {
-  background: #01040d;
-  border-radius: 16px;
-  padding: 14px 30px 14px 30px;
+  background: #212121;
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
+  padding: 11px 30px 11px 30px;
   color: #fff;
   font-weight: 700;
   font-size: 15px;
@@ -63,16 +65,26 @@
 }
 .offer-input input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
+  color: #666;
   opacity: 1; /* Firefox */
 }
 
 .offer-input input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #fff;
+  color: #666;
 }
 
 .offer-input input::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #fff;
+  color: #666;
+}
+.offerbanner_bg {
+  position: absolute;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 120px;
+  line-height: 151px;
+  color: #fafbff;
+  top: 0;
+  z-index: -1;
 }

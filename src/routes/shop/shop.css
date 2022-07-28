@@ -3,7 +3,13 @@
   width: 100%;
   margin: 40px auto;
 }
-
+.shop-wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1.6fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
+  gap: 20px;
+}
 .shop-wrapper h1 {
   font-weight: 700;
   font-size: 22px;

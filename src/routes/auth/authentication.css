@@ -1,8 +1,7 @@
 .auth-container {
-  background-color: #012210;
+  background-color: #fbfcff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   height: 100vh;
 }
@@ -18,16 +17,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 .auth-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 772px;
-  height: 584px;
+  height: fit-content;
   background: #ffffff;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
+  border-radius: 9px;
+  box-shadow: 1px 1px 10px rgb(241 241 241);
 }
 .auth-card-top {
   display: flex;
@@ -56,16 +56,15 @@
 }
 .auth-card-bottom .auth-sign-in input,
 .auth-card-bottom .auth-sign-up input {
-  border: 1px solid #8991a4;
-  border-radius: 16px;
-  background-color: transparent;
+  background: rgba(241, 241, 241, 0.2);
+  border: 1.2px solid #f1f1f1;
+  border-radius: 8px;
   padding: 12px 20px 12px 40px;
-  width: 374px;
-  color: #8991a4;
-  outline: none;
-  font-weight: 400;
-  font-size: 14px;
+  width: 100%;
+  font-size: 16px;
   line-height: 22px;
+  color: #212121;
+  outline: none;
 }
 .input-icons {
   position: absolute;
@@ -103,8 +102,7 @@
   color: #01221d;
 }
 .sign-in-btn button {
-  background: #07bfa5;
-  border-radius: 16px;
+  background: #212121;
   width: 374px;
   height: 64px;
   border: none;
@@ -118,13 +116,15 @@
 }
 .sign-in-btn button:disabled {
   cursor: not-allowed;
-  background: #02947e;
+  background: #f1f1f1;
+  color: #2e2e2e;
 }
 .auth-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 .auth-bottom p {
   font-style: normal;
@@ -132,7 +132,7 @@
   font-size: 12px;
   line-height: 16px;
   text-align: center;
-  color: #f4f5f6;
+  color: #212121;
 }
 .google-sign-in {
   font-size: 40px;

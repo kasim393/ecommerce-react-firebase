@@ -8,6 +8,8 @@ import LatestProduct from "../../components/latestproduct/LatestProduct";
 import OfferBanner from "../../components/offerbanner/OfferBanner";
 import { fetchCategoriesStartAsync } from "../../store/categories/category.action";
 import { useEffect } from "react";
+import Promotion from "../../components/promotion/Promotion";
+import Carousel from "../../components/carousel/Carousel";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,8 +20,10 @@ const Home = () => {
     <div className="home-container">
       <Outlet />
       <Header />
-      <CategoryComponent />
-      <LatestProduct />
+      <Promotion />
+      <Carousel />
+      {/* <CategoryComponent />
+      <LatestProduct /> */}
       <OfferBanner />
       <Footer />
     </div>

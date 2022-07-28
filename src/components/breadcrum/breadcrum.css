@@ -1,0 +1,25 @@
+.breadcrum-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.breadcrum-dot {
+  width: 4px;
+  height: 4px;
+  background: #c4c4c4;
+  border-radius: 50%;
+}
+.breadcrum-inactive {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+  color: #666666;
+}
+.breadcrum-active {
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+  color: #666666;
+}

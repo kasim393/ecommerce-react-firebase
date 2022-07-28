@@ -9,6 +9,9 @@
     "test": "vite test"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.9.1",
     "@reduxjs/toolkit": "^1.8.2",
     "@stripe/react-stripe-js": "^1.8.0",
     "@stripe/stripe-js": "^1.32.0",
@@ -27,7 +30,8 @@
     "redux-thunk": "^2.4.1",
     "reselect": "^4.1.5",
     "stripe": "^9.12.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "swiper": "^8.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

@@ -1,5 +1,5 @@
 import "./header.css";
-import bannerImg from "../../assets/bannerImg.svg";
+import bannerImg from "../../assets/header_img.png";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
@@ -7,11 +7,14 @@ const Header = () => {
       <div className="header-wrapper">
         <div className="header-shape">
           <div className="header-shape_left">
-            <h1>
-              New collection with <span>15%</span> discount
-            </h1>
+            <span>Sale 70%</span>
+            <h1>An Industrial Take on Streetwear</h1>
+            <p>
+              Anyone can beat you but no one can beat your outfit as long as you
+              wear Dine outfits.
+            </p>
             <Link to="shop">
-              <button className="header-btn">Shop now</button>
+              <button className="header-btn">Start Shopping</button>
             </Link>
           </div>
           <div className="header-shape_right">

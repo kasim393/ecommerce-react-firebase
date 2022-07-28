@@ -1,16 +1,26 @@
 import "./footer.css";
-import FooterLogo from "../../assets/footer-logo.png";
+import FooterLogo from "../../assets/Logo.svg";
+import {
+  FaTwitterSquare,
+  FaFacebookSquare,
+  FaInstagram,
+  FaGithubSquare,
+} from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-main">
         <div className="footer-wrapper1">
           <div className="footer-section">
-            <img src={FooterLogo} alt="" />
-            <h1>
-              Shop<span>per</span>
-            </h1>
-            <h1>Where you can get all the stuff.</h1>
+            <img src={FooterLogo} alt="" className="footer-logo" />
+            <p className="footer-details">
+              Small, artisan label that offers a thoughtfully curated collection
+              of high quality everyday essentials made.
+            </p>
+            <FaTwitterSquare className="footer-icon" />
+            <FaFacebookSquare className="footer-icon" />
+            <FaInstagram className="footer-icon" />
+            <FaGithubSquare className="footer-icon" />
           </div>
         </div>
         <div className="footer-wrapper2">

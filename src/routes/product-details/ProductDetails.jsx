@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../utils/firebase/firebase.utils";
 import ProductDetailCard from "../../components/product-detail-card/ProductDetailCard";
+import BreadCrum from "../../components/breadcrum/BreadCrum";
 const ProductDetails = () => {
   const { productId, category } = useParams();
 
@@ -30,6 +31,9 @@ const ProductDetails = () => {
   return (
     <>
       <div className="product-details">
+        <div className="breadcrum-wrapper">
+          <BreadCrum />
+        </div>
         <div className="product-detail-wrapper">
           {data.map((item) => (
             <>
@@ -40,7 +44,7 @@ const ProductDetails = () => {
           ))}
         </div>
       </div>
-      <OfferBanner />
+      {/* <OfferBanner /> */}
       <Footer />
     </>
   );

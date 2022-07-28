@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 const CategoryPreview = ({ title, products }) => {
   return (
     <div className="category-preview-container">
-      <div className="shop-wrapper-head">
+      {/* <div className="shop-wrapper-head">
         <h2>{title.toUpperCase()}</h2>
         <Link to={title}>
           <img src={right_arrow} alt="" />
         </Link>
-      </div>
+      </div> */}
       <div className="shop-products">
         {products
-          .filter((_, idx) => idx < 4)
+          // .filter((_, idx) => idx < 3)
           .map((product) => (
             <ShopCard key={product.id} product={product} title={title} />
           ))}

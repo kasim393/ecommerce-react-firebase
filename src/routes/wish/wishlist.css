@@ -1,60 +1,113 @@
 .wishlist-container {
-  max-width: 1170px;
   width: 100%;
-  margin: 40px auto;
+  background-color: #fbfcff;
+  height: calc(100vh - 80px);
 }
-.wishlist-container h1 {
-  margin-bottom: 40px;
+.wishlist-wrapper-top {
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
 }
+.wishlist-title {
+  position: relative;
+  z-index: 1;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.wishlist-title-bg {
+  position: absolute;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 100px;
+  color: #f1f1f1;
+  top: 0;
+  z-index: -1;
+  user-select: none;
+  width: 352px;
+}
+.wishlist-left-top h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: #01040d;
+}
+
 .wishlist-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 24px;
 }
 .wishlist-card {
-  width: 175px;
+  width: 275px;
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  box-shadow: 0px 4px 30px rgba(27, 25, 86, 0.1);
-  border-radius: 16px;
-  padding: 1rem;
+  border-radius: 9px;
+  box-shadow: 1px 1px 10px rgb(241 241 241);
 }
 .wishlist-card-top {
   display: flex;
   justify-content: space-between;
 }
-.wishlist-card-bottom {
+.wishlist-card-top img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.wishlist-card-mid {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 10px;
   gap: 5px;
+  padding: 0 1rem 1rem 1rem;
 }
-.wishlist-card-bottom img {
+.wish-card-mid-row {
+  display: flex;
+  justify-content: space-between;
+}
+.wish-card-mid-row div {
+  display: flex;
+  gap: 5px;
+}
+.wishlist-card-mid img {
   width: 100px;
   object-fit: contain;
-  border-radius: 16px;
+  /* border-radius: 16px; */
 }
-.wishlist-card-bottom p {
+.wishlist-card-mid p {
   color: #01040d;
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
 }
-.wishlist-card-bottom span {
+.wishlist-card-mid span {
   color: #01040d;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
 }
-.wishlist-card-top .wishlist_trash {
+.wishlist-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 1rem 1rem 1rem;
+}
+.wishlist-card-bottom .wishlist_trash {
   font-size: 1.4rem;
   cursor: pointer;
   color: #01040d;
 }
-.wishlist-card-top .wishlist-cart-icon {
+.wishlist-card-bottom .wishlist-cart-icon {
   font-size: 1.4rem;
   cursor: pointer;
   color: #01040d;
+}
+.wishlist-card-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
 }

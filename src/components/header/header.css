@@ -1,45 +1,57 @@
 .header-container {
-  background-color: #01221d;
+  background-color: #fbfcff;
   border-radius: 0px 0px 16px 16px;
+  padding-top: 24px;
 }
 .header-wrapper {
   display: flex;
-  height: 614px;
-  background-image: url("../../assets/Pattern.svg");
 }
 .header-shape {
-  width: 1170px;
+  /* width: 1170px; */
   margin: auto;
-  background: #07bfa5;
-  border-radius: 33.089px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  gap: 100px;
   /* padding: 0 2rem; */
 }
-.header-shape_left h1 {
-  color: #01040d;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 36px;
-}
-.header-shape_left span {
-  font-weight: 800;
-  font-size: 34px;
-  line-height: 51px;
-  letter-spacing: -0.01em;
 
-  color: #fff;
-}
-.header-shape_left button {
-  background: #01040d;
-  border-radius: 16px;
-  padding: 16px 24px;
-  color: #fff;
+.header-shape_left h1 {
+  max-width: 450px;
+  width: 100%;
   font-weight: 700;
+  font-size: 44px;
+  line-height: 55px;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.header-shape_left p {
+  max-width: 400px;
+  width: 100%;
+  font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  color: #666666;
+  margin-bottom: 40px;
+}
+.header-shape_left span {
+  background: #eef4fe;
+  border-radius: 6px;
+  color: #0062f5;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.header-shape_left button {
+  background: #212121;
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
+  padding: 14px 24px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
   margin-top: 1rem;
   cursor: pointer;
 }

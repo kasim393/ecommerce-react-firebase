@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 80px);
+  background-color: #fbfcff;
 }
 .cartempty-wrapper {
   display: flex;

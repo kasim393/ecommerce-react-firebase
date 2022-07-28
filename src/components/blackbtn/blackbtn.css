@@ -1,6 +1,7 @@
 .blackbtn {
-  background: #01040d;
-  border-radius: 16px;
+  background: #212121;
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
+  /* border-radius: 16px; */
   padding: 16px 24px;
   color: #fff;
   font-weight: 700;

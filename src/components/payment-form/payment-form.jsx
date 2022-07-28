@@ -1,14 +1,19 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { selectCartTotal, selectTotal } from "../../store/cart/cart.selector";
+import {
+  selectCartItems,
+  selectCartTotal,
+  selectTotal,
+} from "../../store/cart/cart.selector";
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectIsModalOpen } from "../../store/modal/modal.selector";
 import BlackBtn from "../blackbtn/BlackBtn";
 import OrderModal from "../order-modal/OrderModal";
 import "./payment-form.css";
 import { setIsModalOpen } from "../../store/modal/modal.action";
+import { clearAllItemFromCart } from "../../store/cart/cart.action";
 const CARD_ELEMENT_OPTIONS = {
   style: {
     base: {
@@ -31,12 +36,21 @@ const CARD_ELEMENT_OPTIONS = {
 const PaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const amount = useSelector(selectCartTotal);
   const { total } = useSelector(selectTotal);
+  const cartItems = useSelector(selectCartItems);
   const currentUser = useSelector(selectCurrentUser);
   const [isProcessing, setIsProcessing] = useState(false);
   const isModalOpen = useSelector(selectIsModalOpen);
   const dispatch = useDispatch();
+  const itemRef = useRef([]);
+
+  const clearItemHandler = () => {
+    dispatch(clearAllItemFromCart(cartItems, itemRef.current));
+  };
+  cartItems.map((item) => {
+    itemRef.current.push(item);
+  });
+  console.log(isModalOpen);
   const toggleIsCartOpen = () => dispatch(setIsModalOpen(!isModalOpen));
   const paymentHandler = async (event) => {
     event.preventDefault();

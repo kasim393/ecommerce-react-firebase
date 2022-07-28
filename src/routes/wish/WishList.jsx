@@ -12,16 +12,25 @@ const WishList = () => {
 
   return (
     <div className="wishlist-container">
-      <h1>Your Wish List</h1>
-      {wishCount ? (
-        <div className="wishlist-wrapper">
-          {wishItems.map((wishItem) => (
-            <WishListItem key={wishItem.id} wishItem={wishItem} />
-          ))}
-        </div>
-      ) : (
-        <CartEmpty text="wishlist" />
-      )}
+      <div className="wishlist-wrapper-top">
+        {wishCount ? (
+          <div className="wishlist-title">
+            <span className="wishlist-title-bg">Favorite</span>
+            <h1>Wish List</h1>
+          </div>
+        ) : (
+          ""
+        )}
+        {wishCount ? (
+          <div className="wishlist-wrapper">
+            {wishItems.map((wishItem) => (
+              <WishListItem key={wishItem.id} wishItem={wishItem} />
+            ))}
+          </div>
+        ) : (
+          <CartEmpty text="wishlist" />
+        )}
+      </div>
     </div>
   );
 };

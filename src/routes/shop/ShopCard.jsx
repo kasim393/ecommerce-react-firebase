@@ -1,9 +1,8 @@
 import "./shopcard.css";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import Circle_btn from "../../assets/product-circle-btn.png";
-import Circle_btn2 from "../../assets/product-circle-btn_2.png";
+import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
+import { BsBag, BsBagCheck } from "react-icons/bs";
 import { Link, useParams } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart, clearItemFromCart } from "../../store/cart/cart.action";
@@ -13,14 +12,22 @@ import {
 } from "../../store/wishlist/wish.action";
 import { selectCartItems } from "../../store/cart/cart.selector";
 import { selectWishItems } from "../../store/wishlist/wish.selector";
+import { useEffect, useState } from "react";
 const ShopCard = ({ product, title }) => {
   const params = useParams();
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
   const wishItems = useSelector(selectWishItems);
+  const [selectSize, setSelectSize] = useState(product?.size[0]);
+  const [selectColor, setSelectColor] = useState(product?.color[0]);
+  const [newItem, setNewItem] = useState(product);
+
+  useEffect(() => {
+    setNewItem((prev) => ({ ...prev, size: selectSize, color: selectColor }));
+  }, []);
 
   const addProductToCart = () => {
-    dispatch(addItemToCart(cartItems, product));
+    dispatch(addItemToCart(cartItems, newItem));
 
     toast.success("Added to cart", {
       position: "bottom-right",
@@ -80,11 +87,11 @@ const ShopCard = ({ product, title }) => {
   return (
     <div className="shop-card">
       <div className="shop-card-top">
-        <span>50%</span>
+        {/* <span>50%</span> */}
         {existingWishItem ? (
-          <AiFillHeart className="outline_heart" onClick={clearWish} />
+          <IoMdHeart className="outline_heart" onClick={clearWish} />
         ) : (
-          <AiOutlineHeart
+          <IoMdHeartEmpty
             className="outline_heart"
             onClick={addProductToWish}
           />
@@ -99,22 +106,33 @@ const ShopCard = ({ product, title }) => {
           <img src={product.img} alt="product-img" className="product-img" />
         </Link>
         <p className="product-title">{product.name}</p>
+        <span className="product-cat">{product.subcat}</span>
         <p className="product-price">${product.price}</p>
       </div>
       <div className="shop-card-bottom">
         {existingCartItem ? (
-          <img
-            src={Circle_btn2}
-            className="shop-card-botom-btn-circle"
-            onClick={clearCart}
-          />
+          // <img
+          //   src={Circle_btn2}
+          //   className="shop-card-botom-btn-circle"
+          //   onClick={clearCart}
+          // />
+          // <BsBagCheck
+          //   onClick={clearCart}
+          //   className="shop-card-botom-btn-circle"
+          // />
+          <p onClick={clearCart}>Added</p>
         ) : (
-          <img
-            src={Circle_btn}
-            className="shop-card-botom-btn-circle"
-            onClick={addProductToCart}
-            alt="circle-btn"
-          />
+          // <img
+          //   src={Circle_btn}
+          //   className="shop-card-botom-btn-circle"
+          //   onClick={addProductToCart}
+          //   alt="circle-btn"
+          // />
+          // <BsBag
+          //   onClick={addProductToCart}
+          //   className="shop-card-botom-btn-circle"
+          // />
+          <p onClick={addProductToCart}>Add to Cart</p>
         )}
       </div>
     </div>

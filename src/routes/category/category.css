@@ -8,13 +8,13 @@
   font-size: 22px;
   line-height: 28px;
   color: #01040d;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .category-products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  column-gap: 24px;
-  row-gap: 66px;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  column-gap: 20px;
+  row-gap: 40px;
 }
 .category-filters {
   display: flex;

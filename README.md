@@ -1,7 +1,11 @@
 # Ecommerce Application
 
+## Live Preview
+
+## [Demo](https://ecommerce-firebase.netlify.app/)
+
 <div align="center">
-      <h1> <img src="https://raw.githubusercontent.com/kasim393/assets/main/ecommerce-react-firebase/ss1.png"><br/>Ecommerce Website</h1>
+      <h1> <img src="https://raw.githubusercontent.com/kasim393/assets/main/react-ecommerce-firebase/ss1.png"><br/>Ecommerce Website</h1>
 </div>
 
 Ecommerce website build with react and firebase
@@ -13,10 +17,6 @@ Ecommerce website build with react and firebase
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
-
-## Live Preview
-
-[Demo](https://ecommerce-firebase.netlify.app/)
 
 ## Build Setup
 
@@ -39,14 +39,10 @@ $ npm run dev
 - [x] Login / Register
 - [x] Add to Cart
 - [x] Add to Wishlist
-- [x] Sort by High , low price
-- [x] Admin Dashboard - Add, View, Delete products
-- [x] Admin Dashboard - Manage user
-- [ ] Admin Dashboard - edit / update
-- [ ] Search filter
+- [x] Filtering and searching
 - [ ] Coupons code
 - [ ] Order Tracking
 - [ ] Mobile responsive
-- [ ] Payment Gateway
+- [x] Payment Gateway
 
-Figma design by [masstudio](https://ui8.net/masstudio/products/shopper---ecommerce-mobile-app--desktop)
+Figma design by [UI Market](https://ui8.net/ui-market/products/e-commerce-ui-website-design)

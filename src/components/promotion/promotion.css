@@ -1,0 +1,132 @@
+.promotion_container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-top: 100px;
+}
+.promo_blue {
+  color: #0062f5;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.prom_title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+.promotion_row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.promotion_col_1 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.promotion_col_top {
+  display: flex;
+  background: #d6d6d8;
+  align-items: center;
+  padding-left: 40px;
+}
+.promotion_col_top h3 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  color: #212121;
+}
+.promotion_col_top p {
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.promotion_col_bottom {
+  background: #212121;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promotion_col_bottom h1 {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.promotion_col_bottom p {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin-top: 12px;
+}
+.promotion_col_bottom .promotion_code {
+  border-radius: 8px;
+  background-color: #424242;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.25em;
+  width: min-content;
+  padding: 10px 45px;
+}
+.promotion_col_2 {
+  display: flex;
+  gap: 14px;
+}
+.promotion_col_left {
+  background-color: #efe1c7;
+  position: relative;
+}
+.promotion_col_left_top {
+  padding: 15px 0px 4px 20px;
+}
+.promotion_col_left p {
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.promotion_col_left span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: line-through;
+  color: #666666;
+}
+.promotion_col_right {
+  background: #d7d7d9;
+  position: relative;
+}
+.promotion_col_right_top {
+  padding: 15px 0px 4px 20px;
+}
+.promotion_card_next {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}

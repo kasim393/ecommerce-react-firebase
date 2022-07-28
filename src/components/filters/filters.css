@@ -1,0 +1,121 @@
+.filter_container {
+  max-width: 252px;
+  width: 100%;
+}
+.filter_category {
+  margin-bottom: 32px;
+}
+.filter_title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: #666666;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.filter_category_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.filter_category_list_item_title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #212121;
+  margin: 12px;
+  cursor: pointer;
+}
+.filter_category_active {
+  background: #212121;
+  box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  width: 100%;
+  padding: 12px;
+  margin-left: 0;
+}
+.color_button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-inline: 2px;
+  border: none;
+  cursor: pointer;
+  line-height: 10px;
+}
+.filter_color {
+  margin-bottom: 32px;
+}
+.filter_color_list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.filter_search_input {
+  position: relative;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+.filter_search_input input {
+  background: rgba(241, 241, 241, 0.2);
+  border: 1.2px solid #f1f1f1;
+  border-radius: 8px;
+  padding: 8px 20px 8px 40px;
+  height: 42px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 16px;
+  color: #212121;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter_search_input input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #c4c4c4;
+  opacity: 1; /* Firefox */
+}
+
+.filter_search_input input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #c4c4c4;
+}
+
+.filter_search_input input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #c4c4c4;
+}
+.filter_search_input .search_icon {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  color: #c4c4c4;
+}
+.filter_size {
+  margin-bottom: 32px;
+}
+.filter_size_list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  width: fit-content;
+}
+.clear-btn {
+  background: #212121;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  padding: 12px 36px;
+  cursor: pointer;
+}

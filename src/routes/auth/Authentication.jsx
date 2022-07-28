@@ -35,12 +35,16 @@ const Authentication = () => {
           <div className="auth-card-bottom">
             {show ? <SignIn /> : <SignUp />}
           </div>
+          <div className="auth-bottom">
+            <p>Or sign in with</p>
+            <FcGoogle className="google-sign-in" onClick={signInWithGoogle} />
+          </div>
         </div>
       </div>
-      <div className="auth-bottom">
+      {/* <div className="auth-bottom">
         <p>Or sign in with</p>
         <FcGoogle className="google-sign-in" onClick={signInWithGoogle} />
-      </div>
+      </div> */}
     </div>
   );
 };

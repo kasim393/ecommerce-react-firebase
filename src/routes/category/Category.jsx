@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import BreadCrum from "../../components/breadcrum/BreadCrum";
 import Spinner from "../../components/spinner/Spinner";
 import {
   selectCategoriesMap,
@@ -16,25 +17,30 @@ const Category = () => {
   const [filter, setFilter] = useState("");
   const isLoading = useSelector(selectIsLoading);
 
+  // useEffect(() => {
+  //   const sorting = (type) => {
+  //     if (type === "high") {
+  //       setProducts(
+  //         categoriesMap[category]?.sort((a, b) => (a.price > b.price ? 1 : -1))
+  //       );
+  //     } else if (type === "low") {
+  //       setProducts(
+  //         categoriesMap[category]?.sort((a, b) => (a.price > b.price ? -1 : 1))
+  //       );
+  //     }
+  //   };
+  //   sorting(filter);
+  // }, [filter, categoriesMap]);
+
   useEffect(() => {
-    const sorting = (type) => {
-      if (type === "high") {
-        setProducts(
-          categoriesMap[category]?.sort((a, b) => (a.price > b.price ? 1 : -1))
-        );
-      } else if (type === "low") {
-        setProducts(
-          categoriesMap[category]?.sort((a, b) => (a.price > b.price ? -1 : 1))
-        );
-      }
-    };
-    sorting(filter);
-  }, [filter, categoriesMap]);
+    setProducts(categoriesMap[category]);
+  }, [category, categoriesMap]);
 
   return (
     <div className="category-container">
+      <BreadCrum />
       <h1>{category.toUpperCase()}</h1>
-      <div className="category-filters">
+      {/* <div className="category-filters">
         <span>New</span>
         <span
           onClick={() => setFilter("high")}
@@ -48,7 +54,7 @@ const Category = () => {
         >
           Low Price
         </span>
-      </div>
+      </div> */}
       <div className="category-wrapper">
         {isLoading ? (
           <Spinner />
