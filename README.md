@@ -46,3 +46,5 @@ $ npm run dev
 - [x] Payment Gateway
 
 Figma design by [UI Market](https://ui8.net/ui-market/products/e-commerce-ui-website-design)
+
+project is still in development!
